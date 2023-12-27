@@ -1,0 +1,51 @@
+
+HTML:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="scroll-container">
+    <div class="content">
+      <!-- محتوا -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+CSS (styles.css):
+```css
+.scroll-container {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888888 #dddddd;
+}
+
+.content {
+  /* اندازه و محتویات دلخواه */
+}
+```
+
+JavaScript (script.js):
+```javascript
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollContainer = document.querySelector(".scroll-container");
+
+  // تغییر رنگ استایل اسکرول بر اساس نیاز شما
+  const scrollbarColor = "#888888";
+  const scrollbarTrackColor = "#dddddd";
+
+  // تنظیم استایل اسکرول
+  scrollContainer.style.scrollbarWidth = "thin";
+  scrollContainer.style.scrollbarColor = `${scrollbarColor} ${scrollbarTrackColor}`;
+});
+```
+
+در این مثال، یک حاویه با نام "scroll-container" تعریف شده است که دارای یک شی با نام "content" می‌باشد. با اعمال استایل‌های مربوط به اسکرول در فایل CSS و استفاده از جاوااسکریپت در فایل JS میتوانید استایل اسکرول را به صورت کاستوم تغییر دهید.
